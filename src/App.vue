@@ -4,7 +4,7 @@
 
         <div v-if="authenticatedUsername">
             <user-panel :username="authenticatedUsername" @logout="logMeOut()"></user-panel>
-            <meetings-page></meetings-page>
+            <meetings-page :authenticatedUsername="authenticatedUsername"></meetings-page>
         </div>
 
         <div v-else>

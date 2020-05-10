@@ -13,13 +13,19 @@
     export default {
         data() {
             return {
-                newMeeting: {}
+                newMeeting: {
+                    name: '',
+                    description: '',
+                    participants: [],
+                }
             };
         },
         methods: {
             addNewMeeting() {
-                this.$emit('added', this.newMeeting);
-                this.newMeeting = {};
+                this.$emit('added',  Object.assign({}, this.newMeeting));
+                this.newMeeting.name = '';
+                this.newMeeting.description = '';
+                this.newMeeting.participants = [];
             }
         }
     }
