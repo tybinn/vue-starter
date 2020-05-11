@@ -30,21 +30,21 @@
 
             joinMeeting(meetingName) {
                 for (let i = 0; i < this.meetings.length; i++) {
-                    if (this.meetings[i].name === meetingName) {
+                    if (this.meetings[i].name == meetingName) {
                         this.meetings[i].participants.push(this.authenticatedUsername);
                     }
                 }
             },
             leaveMeeting(meetingName) {
                 for (let i = 0; i < this.meetings.length; i++) {
-                    if (this.meetings[i].name === meetingName) {
+                    if (this.meetings[i].name == meetingName) {
                         this.meetings[i].participants.splice(this.meetings[i].participants.indexOf(this.meetings[i]), 1);
                     }
                 }
             },
             removeMeeting(meetingName) {
                 for (let i = 0; i < this.meetings.length; i++) {
-                    if (this.meetings[i].name === meetingName) {
+                    if (this.meetings[i].name == meetingName) {
                         this.meetings.splice(i, 1);
                     }
                 }
